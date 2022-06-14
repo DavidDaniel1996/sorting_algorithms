@@ -1,5 +1,13 @@
 #include "sort.h"
 
+/**
+ * insertion_sort_list - sorts using insertion method
+ *
+ * @list: pointer to list
+ *
+ * Return: void
+ */
+
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *ptr, *ptr1;
@@ -8,6 +16,8 @@ void insertion_sort_list(listint_t **list)
 
 	while (ptr != NULL)
 	{
+		if (ptr->next == NULL)
+			break;
 		if (ptr->n > ptr->next->n)
 		{
 			ptr1 = ptr->next;
